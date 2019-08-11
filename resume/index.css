@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+body {
+  max-width: 720px;
+  margin: auto;
+  padding: 4em 8em;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    padding: 2em 4em;
+  }
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+  width: min-content;
+}
+.id {
+  order: 15;
+  animation-name: reorder;
+  animation-duration: 20s;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+/*
+anti-tracking fun: 
+1 2 3 4 5 6 7 8 9 1 1 2 3
+n e w _ c a i r o _ s k y
+e r i k _ w y s o c a n _
+*/
+
+.id--1 {
+  order: 13;
+  animation-delay: 2.1s;
+}
+.id--2 {
+  order: 1;
+  animation-delay: 2.2s;
+}
+.id--3 {
+  order: 6;
+  animation-delay: 2.3s;
+}
+.id--4 {
+  order: 5;
+  animation-delay: 2.4s;
+}
+.id--5 {
+  order: 10;
+  animation-delay: 2.5s;
+}
+.id--6 {
+  order: 11;
+  animation-delay: 2.6s;
+}
+.id--7 {
+  order: 3;
+  animation-delay: 2.7s;
+}
+.id--8 {
+  order: 2;
+  animation-delay: 2.8s;
+}
+.id--9 {
+  order: 9;
+  animation-delay: 2.9s;
+}
+.id--10 {
+  order: 13;
+  animation-delay: 3s;
+}
+.id--11 {
+  order: 8;
+  animation-delay: 3.1s;
+}
+.id--12 {
+  order: 4;
+  animation-delay: 3.2s;
+}
+.id--13 {
+  order: 7;
+  animation-delay: 3.3s;
+}
+@keyframes reorder {
+  0% {
+    order: 0;
+    opacity: 1;
+    max-width: 2ch;
+  }
+  25% {
+  }
+  50% {
+    order: 0;
+  }
+  75% {
+  }
+  100% {
+    opacity: 1;
+    max-width: 2ch;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
+a:hover {
+  color: darkgrey;
+}
+
+abbr {
+  border-bottom: none !important;
+  cursor: inherit !important;
+  text-decoration: none !important;
+}
+
+header h1 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+header p {
+  font-style: italic;
+  color: #434343;
+  margin-top: 0.5em;
+  padding-top: 0;
+}
+
+.meta {
+  margin: 2em 0;
+}
+
+.tech-list {
+  color: #434343;
+}
+
+.tech-list > p {
+  display: inline;
+}
+.tech-list > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+
+.tech-list > ul > li {
+  display: inline;
+}
+.tech-list > ul > li::after {
+  content: ", ";
+}
+.tech-list > ul > li:last-of-type::after {
+  content: "";
+}
+
+.teaching ul {
+  margin: 0;
+  padding-left: 1em;
+}
+.teaching li {
+  margin-bottom: 0.4em;
+}
+
+.skills dl {
+  // columns: 2;
+}
+
+.skills dt {
+  font-weight: bold;
+}
+
+.skills dt:not(:first-of-type) {
+  margin-top: 1em;
+}
+
+.skills dd {
+  break-before: avoid;
+}
+
+.languages dt {
+  float: left;
+  clear: left;
+}
+
+.languages dt::after {
+  white-space: pre;
+  content: ": ";
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: black;
+}
+
+.dated-title,
+.extracurricular h3 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  margin-left: -15px;
+  padding-left: 10px;
+  border-left: 5px solid whitesmoke;
+  margin-top: 2em;
+  font-size: 14px;
+}
+
+.dates,
+.location {
+  color: #434343;
+  padding: 0;
+  margin: 0;
+}
+.location {
+}
+.divider-title {
+  position: relative;
+  margin-left: 0;
+  padding-left: 10px;
+  /*border-left: 5px solid whitesmoke;*/
+  margin-top: 2em;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 0.25em 2px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+dl.meta {
+  display: grid;
+  grid-template-columns: auto;
+
+  /*grid-template-columns: repeat(
+    auto-fill,
+    minmax(100px, 1fr)
+  );*/
+}
+dl.meta dt {
+  padding-right: 10px;
+  color: lightgrey;
+  display: none;
+}
+dl.meta dd {
+  margin: 0;
+  grid-column-start: 1;
+  border-top: 2px solid black;
+  padding: 0.25em 0;
+  color: grey;
+}
+dl.meta dd:last-child {
+  border-bottom: 2px solid black;
+}
+/*
+dd {
+  display: inline-block;
+  margin: 0;
+}
+dd:after {
+  display: block;
+  content: "";
+}*/
+
+.skills dl {
+  column-width: 150px;
+}
+.skills dt {
+  color: darkgrey;
+  break-after: avoid-column;
+}
+.skills dd {
+  margin: 0;
+}
+.skills__group {
+  display: block;
+  widows: 3;
+  orphans: 3;
+  padding-bottom: 1em;
+  break-inside: avoid-column;
+}
+@media print {
+  a {
+    color: black;
+  }
+}
