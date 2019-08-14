@@ -15,10 +15,42 @@ body {
   }
 }
 
+@media print {
+  body {
+    padding: 0;
+    font-size: 11px;
+  }
+
+  a {
+    color: black;
+  }
+
+  h2.divider-title {
+    font-size: 15px;
+  }
+
+  h3.dated-title {
+    font-size: 13px;
+  }
+
+  .name {
+    font-size: 15px;
+  }
+  .id {
+    animation: none !important;
+  }
+}
+
+@page {
+  margin: 0.75in 1in;
+}
+
 .name {
   display: flex;
   justify-content: space-between;
   width: min-content;
+  text-transform: uppercase;
+  font-size: 18px;
 }
 .id {
   order: 15;
@@ -269,11 +301,15 @@ dd:after {
 }*/
 
 .skills dl {
-  column-width: 150px;
 }
 .skills dt {
   color: darkgrey;
   break-after: avoid-column;
+  border-bottom: 1px solid darkgrey;
+  margin-bottom: 0.3em;
+  break-inside: avoid;
+  column-span: all;
+  margin-top: 1em;
 }
 .skills dd {
   margin: 0;
@@ -282,11 +318,8 @@ dd:after {
   display: block;
   widows: 3;
   orphans: 3;
-  padding-bottom: 1em;
-  break-inside: avoid-column;
-}
-@media print {
-  a {
-    color: black;
-  }
+  columns: 3;
+
+  /* padding-bottom: 1em; */
+  break-inside: avoid-page;
 }
