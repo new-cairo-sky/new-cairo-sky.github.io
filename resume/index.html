@@ -22,21 +22,34 @@
     <dl class="meta">
       <dt>email</dt>
       <dd>
-        <span
+        <!--<span
           property="email"
           style="unicode-bidi: bidi-override; direction: rtl"
         >
           moc.yksoriacwen<code>@</code>oiduts</span
-        >
+          >-->
+        <a
+          href="#"
+          class="obfemail"
+          data-name="studio"
+          data-domain="newcairosky"
+          data-tld="com"
+          onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;"
+        ></a>
       </dd>
 
       <dt>phone</dt>
       <dd>
-        <span
+        <a
+          href="#"
           property="telephone"
+          data-area="347"
+          data-three="635"
+          data-four="4743"
           style="unicode-bidi: bidi-override; direction: rtl"
+          onclick="window.location.href = 'tel:+1' + this.dataset.area + this.dataset.three + this.dataset.four; return false;"
         >
-          3474 536 743 1+</span
+          3474 536 743 1+</a
         >
       </dd>
 

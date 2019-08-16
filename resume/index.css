@@ -45,6 +45,9 @@ body {
   margin: 0.75in 1in;
 }
 
+.obfemail:after {
+  content: attr(data-name) "@" attr(data-domain) "." attr(data-tld);
+}
 .name {
   display: flex;
   justify-content: space-between;
